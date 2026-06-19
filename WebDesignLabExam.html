@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vowel or Consonant Checker</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container{
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2{
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input{
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            border: 2px solid #6c63ff;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        button{
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #6c63ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #5548d9;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Vowel or Consonant Checker</h2>
+
+    <input type="text" id="char" maxlength="1" placeholder="Enter a letter">
+
+    <br>
+
+    <button onclick="checkChar()">Check</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function checkChar(){
+
+let ch = document.getElementById("char")
+.value.toLowerCase();
+
+if(ch=="a"||ch=="e"||ch=="i"||
+   ch=="o"||ch=="u")
+{
+    document.getElementById("result")
+    .innerHTML="Vowel";
+}
+else
+{
+    document.getElementById("result")
+    .innerHTML="Consonant";
+}
+}
+</script>
+
+</body>
+</html>
